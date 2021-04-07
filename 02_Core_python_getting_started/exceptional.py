@@ -1,3 +1,5 @@
+import sys
+
 DIGIT_MAP = {
     'zero': '0',
     'one': '1',
@@ -12,7 +14,6 @@ DIGIT_MAP = {
 }
 
 def convert(s):
-    x = -1
     try:
         number = ''
         for token in s:
@@ -24,6 +25,8 @@ def convert(s):
     #     print("Conversion failed!")
     #     x = -1
 
-    except (TypeError, KeyError):
-        pass
+    except (TypeError, KeyError) as e:
+        print(f"Conversion eror: {e!r}",
+            file=sys.stderr)
+        return -1
     return x
