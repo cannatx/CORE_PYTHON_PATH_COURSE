@@ -23,4 +23,8 @@ def convert(s):
         print("Conversion failed!")
         x = -1
 
+    except TypeError:
+        print("Conversion failed!")
+        x = -1
+
     return x
