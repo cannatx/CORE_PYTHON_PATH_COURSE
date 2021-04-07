@@ -37,6 +37,7 @@ def main():
         print("This is never printed")
     except ValueError as e:
         print(e, file=sys.stderr)
+        print("Program continues normaly here")
 
 
 if __name__ == '__main__':
